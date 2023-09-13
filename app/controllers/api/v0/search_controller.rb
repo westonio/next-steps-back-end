@@ -1,4 +1,4 @@
-class Api::V0::HealthcareController < ApplicationController
+class Api::V0::SearchController < ApplicationController
   def index
     begin
       result_objects = TwoOneOneService.search(params[:keyword], params[:location])
