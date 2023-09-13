@@ -11,23 +11,29 @@ RSpec.describe "Healthcare", type: :request do
 
       expect(response).to be_successful
       providers.each do |provider|
-        expect(proider).to have_key(:id)
-        expect(proider[:id]).to be_an(String)
+        expect(provider).to have_key(:id)
+        expect(provider[:id]).to be_an(String)
 
-        expect(proider[:attributes]).to have_key(:provider_name)
-        expect(proider[:attributes][:name]).to be_a(String)
+        expect(provider[:attributes]).to have_key(:provider_name)
+        expect(provider[:attributes][:provider_name]).to be_a(String)
 
-        expect(proider[:attributes]).to have_key(:street)
-        expect(proider[:attributes][:street]).to be_a(String)
+        expect(provider[:attributes]).to have_key(:provider_id)
+        expect(provider[:attributes][:provider_id]).to be_a(String)
 
-        expect(proider[:attributes]).to have_key(:city)
-        expect(proider[:attributes][:city]).to be_a(String)
+        expect(provider[:attributes]).to have_key(:description)
+        expect(provider[:attributes][:description]).to be_a(String)
 
-        expect(proider[:attributes]).to have_key(:lat)
-        expect(proider[:attributes][:lat]).to be_a(String)
+        expect(provider[:attributes]).to have_key(:street)
+        expect(provider[:attributes][:street]).to be_a(String)
 
-        expect(proider[:attributes]).to have_key(:lon)
-        expect(proider[:attributes][:lon]).to be_a(String)
+        expect(provider[:attributes]).to have_key(:city)
+        expect(provider[:attributes][:city]).to be_a(String)
+
+        expect(provider[:attributes]).to have_key(:lat)
+        expect(provider[:attributes][:lat]).to be_a(String)
+
+        expect(provider[:attributes]).to have_key(:lon)
+        expect(provider[:attributes][:lon]).to be_a(String)
       end
     end
   end
