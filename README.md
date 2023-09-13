@@ -103,8 +103,8 @@ If you would like to contribute to this project, please follow these steps:
 
 ### Contact
 
-[Allen Russell](allenrusselldev@gmail.com) - GitHub: @garussell
-[Weston Schutt](wtschutt@gmail.com)        - GitHub: @westonio
-[Kaina Cockett](kainacockett@gmail.com)    - GitHub: @kcockett
-[Zanna Fitch](zannafitch2004@gmail.com)    - GitHub: @z-fitch
-[Jorja Flemming](aset284@gmail.com)        - GitHub: @jorjaf
+- [Allen Russell](allenrusselldev@gmail.com) - GitHub: @garussell
+- [Weston Schutt](wtschutt@gmail.com)        - GitHub: @westonio
+- [Kaina Cockett](kainacockett@gmail.com)    - GitHub: @kcockett
+- [Zanna Fitch](zannafitch2004@gmail.com)    - GitHub: @z-fitch
+- [Jorja Flemming](aset284@gmail.com)        - GitHub: @jorjaf
