@@ -5,5 +5,6 @@ class DataSerializer
               :address,
               :city,
               :lat,
-              :lon
+              :lon,
+              :description
 end

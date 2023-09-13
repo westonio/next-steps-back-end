@@ -4,8 +4,13 @@ class Api::V0::HealthcareController < ApplicationController
       faraday.headers["Api-Key"] = Rails.application.credentials.my_api_key[:primary_key]
     end
     response = conn.get
-    result = JSON.parse(response.body, symbolize_names: true)[:results]
-    result = FilteredResults(result) <----! This method needs to be created
-    render json: DataSerializer.new(@result)
+    JSON.parse(response.body, symbolize_names: true)[:results].map do |data|
+      result_objects = FilteredResults.new(data) 
+      #! Break Point 
+      render json: DataSerializer.new(result_objects)
+    end
+    
+
+
   end
 end
