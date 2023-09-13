@@ -17,16 +17,15 @@
 ## Setup
 - Ruby 3.2.2
 - Rails 7.0.7.2
-- Faraday gem for API requests
+- Faraday gem to interact with APIs
 - JSONAPI Serializer gem for formatting JSON responses
-- Faker gem for generating fake data
 - SimpleCov gem for code coverage tracking
 - ShouldaMatchers gem for testing assertions
 - VCR / Webmock to stub HTTP requests in tests to simulate API interactions
 
 ## Project Description
 
-Next Step is full-stack project that leverages the [211 API](https://apiportal.211.org) along with geolocation to assist individuals in finding community resources in their vicinity.  This repository contains the back-end portion of the project, providing an API for the [front-end application](https://github.com/westonio/next-steps-front-end).
+Next Step is full-stack project that leverages the [211 API](https://apiportal.211.org) along with geolocation to assist individuals in finding community resources in their vicinity.  We thought it was particularly important to create search options catored to persons who may not have the ability to navigate existing resources. This repository contains the back-end portion of the project, providing an API for the [front-end application](https://github.com/westonio/next-steps-front-end).
 
 ### Inspiration
 The project draws inspiration from various areas, serving as a tool to support:
@@ -74,22 +73,24 @@ This API was created to expose endpoints for specialized search queries and used
 
 ## Endpoints
 
-1. `GET /api/v0/health_care`
-2. `GET /api/v0/shelters`
-3. `GET /api/v0/basic_needs`
-4. `GET /api/v0/crisis_hotline`
-5. `GET /api/v0/benefits`
-6. `GET /api/v0/mental_health_care`
-7. `GET /api/v0/housing`
-8. `GET /api/v0/food_banks`
-9. `GET /api/v0/addiction_management`
-10. `GET /api/v0/search`
+1. `GET /api/v0/shelters`
+2. `GET /api/v0/basic_needs`
+3. `GET /api/v0/crisis_hotline`
+4. `GET /api/v0/mental_health_care`
+5. `GET /api/v0/search`
 
 ### Future Iterations
 
 - Scale: Utlize cloud storage to store data for Providers and resources.  
 - Utilze Open AI API for generating motivational statements based on user's identified needs.
-- Create more endpoints 
+- Create following endpoints:
+
+1. `GET /api/v0/health_care`
+2. `GET /api/v0/housing`
+3. `GET /api/v0/benefits`
+4. `GET /api/v0/food_banks`
+5. `GET /api/v0/addiction_management`
+6. `GET /api/v0/mental_health_care`
 
 ### Contributing
 
