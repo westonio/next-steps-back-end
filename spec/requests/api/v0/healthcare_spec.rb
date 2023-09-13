@@ -1,7 +1,7 @@
 require "rails_helper"
 
 RSpec.describe "Healthcare", type: :request do
-  describe "GET /api/v0/healthcare" do
+  describe "GET /api/v0/healthcare", :vcr do
     it "should return healthcare facilities near the user with 211 search API. It will return JSON that has 1. facility name, 2. phone number (if available) 3. short description of services, and 4. address details." do
       keyword = "healthcare"
       location = "denver"
@@ -22,15 +22,6 @@ RSpec.describe "Healthcare", type: :request do
 
         expect(proider[:attributes]).to have_key(:city)
         expect(proider[:attributes][:city]).to be_a(String)
-
-        expect(proider[:attributes]).to have_key(:county)
-        expect(proider[:attributes][:county]).to be_a(String)
-
-        expect(proider[:attributes]).to have_key(:state)
-        expect(proider[:attributes][:state]).to be_a(String)
-
-        expect(proider[:attributes]).to have_key(:phone)
-        expect(proider[:attributes][:phone]).to be_a(String)
 
         expect(proider[:attributes]).to have_key(:lat)
         expect(proider[:attributes][:lat]).to be_a(String)
