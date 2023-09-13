@@ -1,12 +1,12 @@
 require "rails_helper"
 
-RSpec.describe "Healthcare", type: :request do
-  describe "GET /api/v0/healthcare", :vcr do
+RSpec.describe "Search", type: :request do
+  describe "GET /api/v0/search", :vcr do
     it "should return healthcare facilities near the user with 211 search API. It will return JSON that has 1. facility name, 2. phone number (if available) 3. short description of services, and 4. address details." do
       keyword = "healthcare"
       location = "denver+CO"
 
-      get "/api/v0/healthcare?keyword=#{keyword}&location=#{location}"
+      get "/api/v0/search?keyword=#{keyword}&location=#{location}"
 
       response_data = JSON.parse(response.body, symbolize_names: true)
       providers = response_data[:data]
@@ -45,7 +45,7 @@ RSpec.describe "Healthcare", type: :request do
       keyword = "jasdhfgkjadshfjkasd"
       location = "denver+CO"
 
-      get "/api/v0/healthcare?keyword=#{keyword}&location=#{location}"
+      get "/api/v0/search?keyword=#{keyword}&location=#{location}"
 
       error_message = JSON.parse(response.body, symbolize_names: true)
 
