@@ -1,9 +1,9 @@
 class DataSerializer
   include JSONAPI::Serializer
-  attributes :provider_id,
-              :provider_name,
-              :address,
+  attributes :provider_name,
+              :street,
               :city,
+              :state,
               :lat,
               :lon,
               :description
