@@ -50,10 +50,10 @@ RSpec.describe "Healthcare", type: :request do
       error_message = JSON.parse(response.body, symbolize_names: true)
 
       expect(response).to_not be_successful
-      expect(response).to have_http_status(404)
+      expect(response).to have_http_status(400)
 
       expect(error_message).to have_key(:errors)
-      expect(error_message[:errors].first[:details]).to eq("Invalid Parameters")
+      expect(error_message[:errors].first[:detail]).to eq("Invalid Parameters")
     end
   end
 end
