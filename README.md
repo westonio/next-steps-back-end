@@ -90,7 +90,6 @@ This API was created to expose endpoints for specialized search queries and used
 3. `GET /api/v0/benefits`
 4. `GET /api/v0/food_banks`
 5. `GET /api/v0/addiction_management`
-6. `GET /api/v0/mental_health_care`
 
 ### Contributing
 
