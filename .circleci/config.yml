@@ -64,7 +64,7 @@ workflows:
           post-steps:
             - run:
                 name: migrate
-                command: heroku run -a $ancient-reaches-38594 rails db:migrate
+                command: heroku run -a $next-steps-front-end rails db:migrate
           filters:
             branches:
               only:
