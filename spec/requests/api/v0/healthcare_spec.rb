@@ -38,6 +38,22 @@ RSpec.describe "Healthcare", type: :request do
         expect(provider[:attributes]).to have_key(:lon)
         expect(provider[:attributes][:lon]).to be_a(String)
       end
+
+    end
+
+    it 'should return an error if the keyword is invalid' do 
+      keyword = "jasdhfgkjadshfjkasd"
+      location = "denver+CO"
+
+      get "/api/v0/healthcare?keyword=#{keyword}&location=#{location}"
+
+      error_message = JSON.parse(response.body, symbolize_names: true)
+
+      expect(response).to_not be_successful
+      expect(response).to have_http_status(404)
+
+      expect(error_message).to have_key(:errors)
+      expect(error_message[:errors].first[:details]).to eq("Invalid Parameters")
     end
   end
 end
