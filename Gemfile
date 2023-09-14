@@ -14,6 +14,7 @@ gem "puma", "~> 5.0"
 
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 # gem "jbuilder"
+gem "jsonapi-serializer"
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
@@ -36,9 +37,17 @@ gem "bootsnap", require: false
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 # gem "rack-cors"
 
-group :development, :test do
+gem "faraday"
+
+group :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
+  gem "simplecov"
+  gem "shoulda-matchers"
+  gem "pry"
+  gem "rspec-rails"
+  gem "vcr"
+  gem "webmock"
 end
 
 group :development do
