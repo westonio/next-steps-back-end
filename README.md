@@ -1,6 +1,7 @@
-# Next Step - Project README
+# Next Steps - Project README
 # Back-End
 
+Link to [Next Steps Website](https://next-steps-front-end-4778e35e4143.herokuapp.com/)
 ## Table of Contents
 
 1. [Project Description](#project-description)
@@ -11,21 +12,24 @@
 6. [Usage](#usage)
 7. [Endpoints](#endpoints)
 8. [Future Iterations](#future-iterations)
-9. [Contributing](#contributing)
-10. [Contact](#contact)
+9. [Suggestions for Contribution](#suggestions-for-contribution)
+10. [Contributors](#contact)
 
 ## Setup
 - Ruby 3.2.2
 - Rails 7.0.7.2
-- Faraday gem to interact with APIs
-- JSONAPI Serializer gem for formatting JSON responses
-- SimpleCov gem for code coverage tracking
-- ShouldaMatchers gem for testing assertions
-- VCR / Webmock to stub HTTP requests in tests to simulate API interactions
+- [Faraday](https://github.com/lostisland/faraday) gem to interact with APIs
+- [JSONAPI Serializer](https://github.com/jsonapi-serializer/jsonapi-serializer) gem for formatting JSON responses
+- [SimpleCov](https://github.com/simplecov-ruby/simplecov) gem for code coverage tracking
+- [ShouldaMatchers](https://github.com/thoughtbot/shoulda-matchers) gem for testing assertions
+- [VCR](https://github.com/vcr/vcr) / [Webmock](https://github.com/bblimke/webmock) to stub HTTP requests in tests to simulate API interactions
 
 ## Project Description
 
-Next Step is full-stack project that leverages the [211 API](https://apiportal.211.org) along with geolocation to assist individuals in finding community resources in their vicinity.  We thought it was particularly important to create search options catored to persons who may not have the ability to navigate existing resources. This repository contains the back-end portion of the project, providing an API for the [front-end application](https://github.com/westonio/next-steps-front-end).
+**Next Steps** is full-stack project that leverages the [211 API](https://apiportal.211.org) along with geolocation to assist individuals in finding community resources in their vicinity.  We thought it was particularly important to create search options catored to persons who may not have the ability to navigate existing resources. This repository contains the back-end portion of the project, providing an API for the [front-end application](https://github.com/westonio/next-steps-front-end).
+
+This project has been deployed using [Heroku](https://id.heroku.com/login), and [Circle CI](https://circleci.com/) was used for Continuous Integration.
+
 
 ### Inspiration
 The project draws inspiration from various areas, serving as a tool to support:
@@ -41,7 +45,7 @@ This tool is designed to assist a wide range of professionals, including crisis 
 
 *"Right now, I have a list of 12 different links that I use when I research options for my clients.  I would love to have an app that has everything in one place"* - anonomous case manager
 
-*"It is challening for people with mental health struggles to have the wherewithal to search for internet for resources they need, let alone come up with the 'next step' on their to do list.  This kind of help is a great for them."* - anonomous social worker
+*"It is challening for people with mental health struggles to have the wherewithal to search the internet for resources they need, let alone come up with the 'next step' on their to do list.  This kind of help is a great for them."* - anonomous social worker
 
 *"The hardest part of my job is to find housing for people who have criminal backgrounds.  If there was a way for housing providers to add their listings, I would be grateful"* - housing specialist
 
@@ -75,26 +79,35 @@ This API was created to expose endpoints for specialized search queries and used
 
 1. `GET /api/v0/search?Keyword="checkbox"&Location="location_entry"`
 
+211 Service:
+
+![211 Service](2023-09-14-10-52-58.png)
+
+Filtered Results for User convenience:
+
+![Filtered Results](2023-09-14-10-55-08.png)
+
 ### Future Iterations
 
-- Scale: Utlize cloud storage to store data for Providers and resources.  
-- Utilze Open AI API for generating motivational statements based on user's identified needs.
-- Create following endpoints:
+- Scale: Utlize cloud storage to store data for Providers and resource list saved by user.  
+- Utilze [Open AI API](https://openai.com/blog/openai-api) for generating motivational statements based on user's identified needs.
+- Create additional pre-built search options that make finding resources easy and convenient.
+- Provider dashboard and Admin functionality.
 
-### Contributing
+### Suggestions for Contribution
 
 If you would like to contribute to this project, please follow these steps:
 
 1. Fork the repository.
 2. Create a new branch for your feature or endpoint. e.g., `git checkout -b <your-feature>`
-3. Commit your changes: `git commit -m "Add new feature`
+3. Commit your changes: `git commit -m "Add new feature"`
 4. Push the branch to your fork: `git push origin your-feature`
 5. Create a pull request outlining your changes.
 
-### Contact
+### Contributors
 
-- [Allen Russell](allenrusselldev@gmail.com) - GitHub: @garussell
-- [Weston Schutt](wtschutt@gmail.com)        - GitHub: @westonio
-- [Kaina Cockett](kainacockett@gmail.com)    - GitHub: @kcockett
-- [Zanna Fitch](zannafitch2004@gmail.com)    - GitHub: @z-fitch
-- [Jorja Flemming](aset284@gmail.com)        - GitHub: @jorjaf
+- [Allen Russell](allenrusselldev@gmail.com) - GitHub: [@garussell](https://github.com/garussell)
+- [Weston Schutt](wtschutt@gmail.com)        - GitHub: [@westonio](https://github.com/westonio)
+- [Kaina Cockett](kainacockett@gmail.com)    - GitHub: [@kcockett](https://github.com/kcockett)
+- [Zanna Fitch](zannafitch2004@gmail.com)    - GitHub: [@z-fitch](https://github.com/z-fitch)
+- [Jorja Flemming](aset284@gmail.com)        - GitHub: [@jorjaf](https://github.com/jorjaf)
