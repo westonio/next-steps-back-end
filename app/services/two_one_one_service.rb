@@ -16,4 +16,5 @@ class TwoOneOneService
       faraday.headers["Api-Key"] = Rails.application.credentials.my_api_key[:primary_key]
     end
   end
+  
 end
