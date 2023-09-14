@@ -1,0 +1,66 @@
+{
+  "http_interactions": [
+    {
+      "request": {
+        "method": "get",
+        "uri": "https://api.211.org/search/v1/api/Search/Keyword?Distance=10&Keyword=jasdhfgkjadshfjkasd&Location=denver%20CO",
+        "body": {
+          "encoding": "US-ASCII",
+          "string": ""
+        },
+        "headers": {
+          "Api-Key": [
+            "MY_SECRET_TOKEN"
+          ],
+          "User-Agent": [
+            "Faraday v2.7.11"
+          ],
+          "Accept-Encoding": [
+            "gzip;q=1.0,deflate;q=0.6,identity;q=0.3"
+          ],
+          "Accept": [
+            "*/*"
+          ]
+        }
+      },
+      "response": {
+        "status": {
+          "code": 404,
+          "message": "Not Found"
+        },
+        "headers": {
+          "Transfer-Encoding": [
+            "chunked"
+          ],
+          "Content-Type": [
+            "application/json; charset=utf-8"
+          ],
+          "Powered-By": [
+            "211 National Data Platform"
+          ],
+          "Search-Location": [
+            "denver co,United States"
+          ],
+          "Search-Location-Complete": [
+            "{\"city\":\"Denver\",\"county\":\"Denver\",\"state\":\"Colorado\",\"stateAbbr\":\"CO\",\"postalCode\":null,\"country\":\"United States\",\"latitude\":\"39.73845\",\"longitude\":\"-104.98485\"}"
+          ],
+          "Search-For": [
+            "keywords=jasdhfgkjadshfjkasd"
+          ],
+          "Request-Context": [
+            "appId=cid-v1:f765b36d-b251-47fd-848a-736b908cb0fe"
+          ],
+          "Date": [
+            "Thu, 14 Sep 2023 14:49:04 GMT"
+          ]
+        },
+        "body": {
+          "encoding": "UTF-8",
+          "string": "{\r\n  \"type\": \"https://tools.ietf.org/html/rfc7231#section-6.5.4\",\r\n  \"title\": \"Not Found\",\r\n  \"status\": 404,\r\n  \"traceId\": \"80000a20-0002-9600-b63f-84710c7967bb\"\r\n}"
+        }
+      },
+      "recorded_at": "Thu, 14 Sep 2023 14:49:04 GMT"
+    }
+  ],
+  "recorded_with": "VCR 6.2.0"
+}
