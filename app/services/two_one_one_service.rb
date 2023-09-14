@@ -1,13 +1,13 @@
 class TwoOneOneService
 
   def self.search(keyword, location)
-    get_url("Search/Keyword?Keyword=#{keyword}&Location=#{location}&Distance=10")
+    get_url("Search/Keyword?Keyword=#{keyword}&Location=#{location}&Distance=10", keyword)
   end
 
-  def self.get_url(url)
+  def self.get_url(url, keyword)
     response = conn.get(url)
     JSON.parse(response.body, symbolize_names: true)[:results].map do |data|
-      FilteredResults.new(data) 
+      FilteredResults.new(data, keyword) 
     end
   end
 

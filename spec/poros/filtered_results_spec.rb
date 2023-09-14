@@ -50,7 +50,7 @@ RSpec.describe "FilteredResults", type: :poros do
           ]
         }
       }
-      filtered_data = FilteredResults.new(raw_data)
+      filtered_data = FilteredResults.new(raw_data, "healthcare")
 
       expect(filtered_data.id).to eq("211colorad-a0h4T000002u0xmQAA")
       expect(filtered_data.provider_name).to eq("TEMPORARY SHELTER FOR PETS")
@@ -60,7 +60,7 @@ RSpec.describe "FilteredResults", type: :poros do
       expect(filtered_data.lat).to eq("39.715260")
       expect(filtered_data.lon).to eq("-105.003082")
       expect(filtered_data.description).to include("Offers 2 to 4 weeks of shelter for pets of families experiencing temporary homelessness due to fire,")
-      
+      expect(filtered_data.category).to eq("healthcare")
     end
   end
 end
