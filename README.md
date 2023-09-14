@@ -23,8 +23,6 @@
 - ShouldaMatchers gem for testing assertions
 - VCR / Webmock to stub HTTP requests in tests to simulate API interactions
 
-## 
-
 ## Project Description
 
 Next Step is full-stack project that leverages the [211 API](https://apiportal.211.org) along with geolocation to assist individuals in finding community resources in their vicinity.  We thought it was particularly important to create search options catored to persons who may not have the ability to navigate existing resources. This repository contains the back-end portion of the project, providing an API for the [front-end application](https://github.com/westonio/next-steps-front-end).
