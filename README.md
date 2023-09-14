@@ -23,6 +23,8 @@
 - ShouldaMatchers gem for testing assertions
 - VCR / Webmock to stub HTTP requests in tests to simulate API interactions
 
+## 
+
 ## Project Description
 
 Next Step is full-stack project that leverages the [211 API](https://apiportal.211.org) along with geolocation to assist individuals in finding community resources in their vicinity.  We thought it was particularly important to create search options catored to persons who may not have the ability to navigate existing resources. This repository contains the back-end portion of the project, providing an API for the [front-end application](https://github.com/westonio/next-steps-front-end).
@@ -41,7 +43,7 @@ This tool is designed to assist a wide range of professionals, including crisis 
 
 *"Right now, I have a list of 12 different links that I use when I research options for my clients.  I would love to have an app that has everything in one place"* - anonomous case manager
 
-*"It is challening for people with mental health struggles to have the wherewithal to search for internet for resources they need, let alone come up with the 'next step' on their to do list.  This help is a great idea for them."* - anonomous social worker
+*"It is challening for people with mental health struggles to have the wherewithal to search for internet for resources they need, let alone come up with the 'next step' on their to do list.  This kind of help is a great for them."* - anonomous social worker
 
 *"The hardest part of my job is to find housing for people who have criminal backgrounds.  If there was a way for housing providers to add their listings, I would be grateful"* - housing specialist
 
@@ -69,27 +71,17 @@ This tool is designed to assist a wide range of professionals, including crisis 
 
 ## Usage
 
-This API was created to expose endpoints for specialized search queries and used with the sister front-end application.  
+This API was created to expose endpoints for specialized search queries and used with the sister front-end application.  The endpoint takes in two parameters, "keyword" and "location".  We proivde the user with some keywords built in, such as "basic needs", "shelters", "medical care", "mental health care", and others.  They can select keywords from our provided options, or utilize the search bar to search their own keyword(s).
 
 ## Endpoints
 
-1. `GET /api/v0/shelters`
-2. `GET /api/v0/basic_needs`
-3. `GET /api/v0/crisis_hotline`
-4. `GET /api/v0/mental_health_care`
-5. `GET /api/v0/search`
+1. `GET /api/v0/search?Keyword="checkbox"&Location="location_entry"`
 
 ### Future Iterations
 
 - Scale: Utlize cloud storage to store data for Providers and resources.  
 - Utilze Open AI API for generating motivational statements based on user's identified needs.
 - Create following endpoints:
-
-1. `GET /api/v0/health_care`
-2. `GET /api/v0/housing`
-3. `GET /api/v0/benefits`
-4. `GET /api/v0/food_banks`
-5. `GET /api/v0/addiction_management`
 
 ### Contributing
 
@@ -99,7 +91,7 @@ If you would like to contribute to this project, please follow these steps:
 2. Create a new branch for your feature or endpoint. e.g., `git checkout -b <your-feature>`
 3. Commit your changes: `git commit -m "Add new feature`
 4. Push the branch to your fork: `git push origin your-feature`
-5. Create a pull request to outlining your changes.
+5. Create a pull request outlining your changes.
 
 ### Contact
 
