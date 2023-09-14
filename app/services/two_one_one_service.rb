@@ -6,6 +6,7 @@ class TwoOneOneService
 
   def self.get_url(url)
     response = conn.get(url)
+    puts response
     JSON.parse(response.body, symbolize_names: true)[:results].map do |data|
       FilteredResults.new(data) 
     end
