@@ -1,4 +1,5 @@
 require 'rails_helper'
+
 RSpec.describe SearchFacade, :vcr do
   describe "#search(keyword, location)" do
     it "returns the top ten results for a given keyword and location" do
