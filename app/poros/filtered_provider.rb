@@ -1,4 +1,4 @@
-class FilteredResults
+class FilteredProvider
   attr_reader :id, 
               :provider_name,
               :street,

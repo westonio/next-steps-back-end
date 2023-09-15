@@ -1,6 +1,6 @@
 require "rails_helper"
 
-RSpec.describe "FilteredResults", type: :poros do
+RSpec.describe "FilteredProvider", type: :poros do
   describe "initialize" do
     it "should take an API result and filter for our needed information" do
       raw_data = {
@@ -50,7 +50,7 @@ RSpec.describe "FilteredResults", type: :poros do
           ]
         }
       }
-      filtered_data = FilteredResults.new(raw_data, "healthcare")
+      filtered_data = FilteredProvider.new(raw_data, "healthcare")
 
       expect(filtered_data.id).to eq("211colorad-a0h4T000002u0xmQAA")
       expect(filtered_data.provider_name).to eq("TEMPORARY SHELTER FOR PETS")
