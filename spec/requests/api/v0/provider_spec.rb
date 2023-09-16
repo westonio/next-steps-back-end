@@ -19,6 +19,7 @@ RSpec.describe "Provider API", type: :request do
       end
 
       it "creates a provider" do
+        headers = {"CONTENT_TYPE" => "application/json"}
         expect do
           post "/api/v0/providers", params: { provider: valid_params }
         end.to change(Provider, :count).by(1)
@@ -44,11 +45,18 @@ RSpec.describe "Provider API", type: :request do
       end
 
       it "does not create a provider" do
+        headers = {"CONTENT_TYPE" => "application/json"}
+
         expect do
           post "/api/v0/providers", params: { provider: invalid_params }
         end.to change(Provider, :count).by(0)
 
         expect(response).to have_http_status(:unprocessable_entity)
+       
+        response_json = JSON.parse(response.body)
+
+        expect(response_json).to have_key("errors")
+        expect(response_json).to include({"errors"=>[{"detail"=>"Invalid Parameters"}]})
       end
     end
   end
@@ -95,7 +103,8 @@ RSpec.describe "Provider API", type: :request do
 
     context "when the provider does not exist" do
       it "returns a 404 (Not Found) status" do
-        get "/api/v0/providers/9999"
+        id = Float::INFINITY
+        get "/api/v0/providers/#{id}"
 
         expect(response).to have_http_status(:not_found)
 
