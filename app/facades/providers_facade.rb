@@ -10,7 +10,7 @@ class ProvidersFacade
   end
   
   
-  private
+private
   def create_provider(json)
     if json.is_a?(Hash) && json[:status] == 404
       raise "Could not find a provider with that ID" 
