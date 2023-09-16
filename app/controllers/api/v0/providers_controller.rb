@@ -21,6 +21,17 @@ class Api::V0::ProvidersController < ApplicationController
     end
   end
 
+  def update
+    begin
+      @provider = Provider.find(params[:id])
+      if @provider.update(provider_params)
+        render json: @provider, status: :ok
+      else
+        render json: ErrorSerializer.format_errors("Invalid Parameters"), status: 422
+      end
+    end
+  end
+
   private
   def provider_params
     params.require(:provider).permit(:organization_name, :description, :address, :city, :state, :zip, :contact_phone, :fees, :schedule) 
