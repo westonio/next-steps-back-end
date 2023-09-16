@@ -1,4 +1,4 @@
-class DataSerializer
+class FilteredProviderSerializer
   include JSONAPI::Serializer
 
   attributes :category,
