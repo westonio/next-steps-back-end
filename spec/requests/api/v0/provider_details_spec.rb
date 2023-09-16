@@ -47,7 +47,7 @@ RSpec.describe 'Search', type: :request do
 
     context 'When an invalid ID is used' do
       it 'should return an error response' do
-        provider_id = "Invalid_ID"
+        provider_id = 'Float::INFINITY'
 
         get "/api/v0/provider_details/#{provider_id}"
 
