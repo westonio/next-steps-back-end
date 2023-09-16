@@ -27,14 +27,24 @@ class DetailedProvider
     @lat = data[:locations].first[:latitude]
     @lon = data[:locations].first[:longitude]
     @website = data[:url]
-    @phone = find_phone(data[:locations].first)
+    @phone = get_phone(data)
     @fees = data[:services].first[:fees]
     @schedule = data[:locations].first[:schedule]
   end
 
-  def find_phone(data)
-    phone = data[:phone].select do |phone|
-      phone[:number] if phone[:type] == "Main Number"
+  def get_phone(data)
+    if data[:services].first.has_key?(:phone)
+      find_phone(data[:services].first[:phone])
+    elsif data[:locations].first.has_key?(:phone)
+      find_phone(data[:locations].first[:phone])
+    else
+      "Phone number not available"
+    end
+  end
+
+  def find_phone(phone_numbers)
+    phone = phone_numbers.select do |phone|
+      phone if phone[:type].downcase.include?('main') 
     end.first
     phone[:number]
   end
