@@ -52,4 +52,55 @@ RSpec.describe "Provider API", type: :request do
       end
     end
   end
+
+  describe "GET /api/v0/providers/:id" do
+    context "when the provider exists" do
+      let(:provider) do
+        Provider.create(
+          organization_name: "Test Organization",
+          description: "Test Description",
+          address: "123 Test St",
+          city: "Test City",
+          state: "TX",
+          zip: "12345",
+          web_url: "https://www.test.com",
+          contact_phone: "123-456-7890",
+          fees: "Test Fees",
+          schedule: "Test Schedule"
+        )
+      end
+
+      it "returns provider details as JSON" do
+        get "/api/v0/providers/#{provider.id}"
+
+        expect(response).to have_http_status(:ok)
+
+        json_response = JSON.parse(response.body)
+
+        expect(json_response).to include(
+          'id' => provider.id,
+          'organization_name' => 'Test Organization',
+          'description' => 'Test Description',
+          'address' => '123 Test St',
+          'city' => 'Test City',
+          'state' => 'TX',
+          'zip' => '12345',
+          'web_url' => 'https://www.test.com',
+          'contact_phone' => '123-456-7890',
+          'fees' => 'Test Fees',
+          'schedule' => 'Test Schedule'
+        )
+      end
+    end
+
+    context "when the provider does not exist" do
+      it "returns a 404 (Not Found) status" do
+        get "/api/v0/providers/9999"
+
+        expect(response).to have_http_status(:not_found)
+
+        expect(response.body).to include("Provider not found")
+      end
+    end
+  end
 end
