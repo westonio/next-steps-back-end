@@ -57,6 +57,64 @@
         }
       },
       "recorded_at": "Sat, 16 Sep 2023 15:49:47 GMT"
+    },
+    {
+      "request": {
+        "method": "get",
+        "uri": "https://api.211.org/search/v1/api/ServiceAtLocation?idServiceAtLocation=211colorad-a0h4T000003fVncQAE",
+        "body": {
+          "encoding": "US-ASCII",
+          "string": ""
+        },
+        "headers": {
+          "Api-Key": [
+            "MY_SECRET_TOKEN"
+          ],
+          "User-Agent": [
+            "Faraday v2.7.11"
+          ],
+          "Accept-Encoding": [
+            "gzip;q=1.0,deflate;q=0.6,identity;q=0.3"
+          ],
+          "Accept": [
+            "*/*"
+          ]
+        }
+      },
+      "response": {
+        "status": {
+          "code": 200,
+          "message": "OK"
+        },
+        "headers": {
+          "Content-Length": [
+            "7179"
+          ],
+          "Content-Type": [
+            "application/json; charset=utf-8"
+          ],
+          "Vary": [
+            "Accept-Encoding"
+          ],
+          "Powered-By": [
+            "211 National Data Platform"
+          ],
+          "View-Data": [
+            "{\"idOrganization\":\"211colorad-0014T000004o6I3QAI\",\"idService\":\"211colorad-a0E4T000000NjbOUAS\",\"idLocation\":\"211colorad-a014T000004ehEEQAY\",\"idServiceAtLocation\":\"211colorad-a0h4T000003fVncQAE\",\"nameOrganization\":\"NEXTCARE URGENT CARE\",\"nameService\":\"MEDICAL CARE\",\"location\":{\"city\":\"Broomfield\",\"county\":\"Broomfield County\",\"stateProvince\":\"CO\",\"postalCode\":\"80020\",\"country\":\"United States\",\"latitude\":\"39.915035\",\"longitude\":\"-105.045715\"},\"serviceTaxonomyCodes\":[\"LN-8500\",\"LE\",\"LV-6800\",\"LT-3400.2500\"]}"
+          ],
+          "Request-Context": [
+            "appId=cid-v1:f765b36d-b251-47fd-848a-736b908cb0fe"
+          ],
+          "Date": [
+            "Sat, 16 Sep 2023 18:31:40 GMT"
+          ]
+        },
+        "body": {
+          "encoding": "ASCII-8BIT",
+          "string": "[\r\n  {\r\n    \"idOrganization\": \"211colorad-0014T000004o6I3QAI\",\r\n    \"name\": \"NEXTCARE URGENT CARE\",\r\n    \"alternateName\": null,\r\n    \"description\": \"<p>Provides urgent care services.</p>\",\r\n    \"url\": \"http://nextcare.com\",\r\n    \"taxStatus\": null,\r\n    \"taxId\": null,\r\n    \"yearIncorporated\": null,\r\n    \"legalStatus\": \"Commercial\",\r\n    \"services\": [\r\n      {\r\n        \"idService\": \"211colorad-a0E4T000000NjbOUAS\",\r\n        \"idOrganization\": \"211colorad-0014T000004o6I3QAI\",\r\n        \"name\": \"MEDICAL CARE\",\r\n        \"alternateName\": null,\r\n        \"description\": \"<p>Assists with:</p><ul><li>Common illnesses</li><li>Minor injuries</li><li>Physicals</li><li>Pediatrics</li><li>X-rays</li><li>Lab services</li><li>Immunizations</li></ul>\",\r\n        \"email\": null,\r\n        \"url\": \"http://nextcare.com\",\r\n        \"status\": \"active\",\r\n        \"applicationProcess\": \"Call or visit the website to schedule an appointment or for more information.\",\r\n        \"waitTime\": null,\r\n        \"fees\": \"<p>Medical Care Fees, call for current fees.</p>\",\r\n        \"accreditations\": null,\r\n        \"schedule\": \"Hours Vary (By Location)\",\r\n        \"language\": \"Spanish,English\",\r\n        \"serviceArea\": [\r\n          {\r\n            \"idServiceArea\": \"4574159455354165521\",\r\n            \"city\": null,\r\n            \"county\": null,\r\n            \"stateProvince\": \"Colorado\",\r\n            \"country\": \"United States\"\r\n          }\r\n        ],\r\n        \"eligibility\": \"No restrictions applied <BR /><br>Area Served:<BR>Statewide\",\r\n        \"document\": \"<p>Must provide:</p><ul><li>Insurance card</li><li>Photo ID</li><li>Co-pay</li></ul>\",\r\n        \"contact\": [],\r\n        \"phone\": [\r\n          {\r\n            \"idPhone\": \"7035447290392141485\",\r\n            \"number\": \"(888) 381-4858 (Customer Service\",\r\n            \"extension\": null,\r\n            \"type\": \"Main\",\r\n            \"description\": null,\r\n            \"name\": null\r\n          }\r\n        ],\r\n        \"taxonomy\": [\r\n          {\r\n            \"idTaxonomy\": \"2297018763978133250\",\r\n            \"code\": \"LN-8500\",\r\n            \"term\": \"Urgent Care Centers\",\r\n            \"nameLevel1\": \"Health Care\",\r\n            \"nameLevel2\": \"Outpatient Health Facilities\",\r\n            \"nameLevel3\": \"Urgent Care Centers\",\r\n            \"nameLevel4\": null,\r\n            \"nameLevel5\": null,\r\n            \"nameLevel6\": null\r\n          },\r\n          {\r\n            \"idTaxonomy\": \"2871651178407837232\",\r\n            \"code\": \"LE\",\r\n            \"term\": \"General Medical Care\",\r\n            \"nameLevel1\": \"Health Care\",\r\n            \"nameLevel2\": \"General Medical Care\",\r\n            \"nameLevel3\": null,\r\n            \"nameLevel4\": null,\r\n            \"nameLevel5\": null,\r\n            \"nameLevel6\": null\r\n          },\r\n          {\r\n            \"idTaxonomy\": \"3559602975575311154\",\r\n            \"code\": \"LV-6800\",\r\n            \"term\": \"Pediatrics\",\r\n            \"nameLevel1\": \"Health Care\",\r\n            \"nameLevel2\": \"Specialty Medicine\",\r\n            \"nameLevel3\": \"Pediatrics\",\r\n            \"nameLevel4\": null,\r\n            \"nameLevel5\": null,\r\n            \"nameLevel6\": null\r\n          },\r\n          {\r\n            \"idTaxonomy\": \"7268255179917805250\",\r\n            \"code\": \"LT-3400.2500\",\r\n            \"term\": \"General Immunization\",\r\n            \"nameLevel1\": \"Health Care\",\r\n            \"nameLevel2\": \"Specialized Treatment and Prevention\",\r\n            \"nameLevel3\": \"Immunizations\",\r\n            \"nameLevel4\": \"General Immunization\",\r\n            \"nameLevel5\": null,\r\n            \"nameLevel6\": null\r\n          }\r\n        ],\r\n        \"category\": null,\r\n        \"serviceAtLocation\": [\r\n          {\r\n            \"idServiceAtLocation\": \"211colorad-a0h4T0000017LiLQAU\",\r\n            \"idLocation\": \"211colorad-a014T000006GO6UQAW\",\r\n            \"idService\": \"211colorad-a0E4T000000NjbOUAS\"\r\n          },\r\n          {\r\n            \"idServiceAtLocation\": \"211colorad-a0h4T000002u03bQAA\",\r\n            \"idLocation\": \"211colorad-a014T000003RADTQA4\",\r\n            \"idService\": \"211colorad-a0E4T000000NjbOUAS\"\r\n          },\r\n          {\r\n            \"idServiceAtLocation\": \"211colorad-a0h4T000002u7F5QAI\",\r\n            \"idLocation\": \"211colorad-a014T000003RPonQAG\",\r\n            \"idService\": \"211colorad-a0E4T000000NjbOUAS\"\r\n          },\r\n          {\r\n            \"idServiceAtLocation\": \"211colorad-a0h4T000003fVnbQAE\",\r\n            \"idLocation\": \"211colorad-a014T000004ehE9QAI\",\r\n            \"idService\": \"211colorad-a0E4T000000NjbOUAS\"\r\n          },\r\n          {\r\n            \"idServiceAtLocation\": \"211colorad-a0h4T000003fVncQAE\",\r\n            \"idLocation\": \"211colorad-a014T000004ehEEQAY\",\r\n            \"idService\": \"211colorad-a0E4T000000NjbOUAS\"\r\n          },\r\n          {\r\n            \"idServiceAtLocation\": \"211colorad-a0h4T000003fVngQAE\",\r\n            \"idLocation\": \"211colorad-a014T000004ehEYQAY\",\r\n            \"idService\": \"211colorad-a0E4T000000NjbOUAS\"\r\n          },\r\n          {\r\n            \"idServiceAtLocation\": \"211colorad-a0h4T000003fVnWQAU\",\r\n            \"idLocation\": \"211colorad-a014T000004ehCZQAY\",\r\n            \"idService\": \"211colorad-a0E4T000000NjbOUAS\"\r\n          },\r\n          {\r\n            \"idServiceAtLocation\": \"211colorad-a0h4T000003fVnXQAU\",\r\n            \"idLocation\": \"211colorad-a014T000004ehCjQAI\",\r\n            \"idService\": \"211colorad-a0E4T000000NjbOUAS\"\r\n          }\r\n        ],\r\n        \"temporaryMessage\": null,\r\n        \"createdOn\": null,\r\n        \"lastUpdated\": null,\r\n        \"lastVerified\": null\r\n      }\r\n    ],\r\n    \"locations\": [\r\n      {\r\n        \"idLocation\": \"211colorad-a014T000004ehEEQAY\",\r\n        \"name\": null,\r\n        \"alternateName\": \"NextCare Urgent Care - Broomfield\",\r\n        \"description\": \"<p>Provides medical care.</p>\",\r\n        \"transportation\": null,\r\n        \"latitude\": \"39.915035\",\r\n        \"longitude\": \"-105.045715\",\r\n        \"schedule\": \"Monday - Friday, 8 a.m. - 8 p.m.; Saturday, Sunday, 9 a.m. - 4 p.m.\",\r\n        \"address\": [\r\n          {\r\n            \"idAddress\": \"7751185733853289394\",\r\n            \"type\": \"physical\",\r\n            \"address_1\": \"4590 W 121st Ave\",\r\n            \"address_2\": null,\r\n            \"city\": \"Broomfield\",\r\n            \"region\": \"Broomfield County\",\r\n            \"state_province\": \"CO\",\r\n            \"zipcode\": \"80020\",\r\n            \"country\": \"United States\"\r\n          }\r\n        ],\r\n        \"accessibility\": \"Yes (Accessible Bathroom;Designated Parking)\",\r\n        \"language\": null,\r\n        \"phone\": [\r\n          {\r\n            \"idPhone\": \"3380791123448311933\",\r\n            \"number\": \"(303) 439-4544\",\r\n            \"extension\": null,\r\n            \"type\": \"Main\",\r\n            \"description\": null,\r\n            \"name\": null\r\n          }\r\n        ],\r\n        \"serviceAtLocation\": [\r\n          {\r\n            \"idServiceAtLocation\": \"211colorad-a0h4T000003fVncQAE\",\r\n            \"idLocation\": \"211colorad-a014T000004ehEEQAY\",\r\n            \"idService\": \"211colorad-a0E4T000000NjbOUAS\"\r\n          }\r\n        ]\r\n      }\r\n    ],\r\n    \"source\": \"211 Colorado\",\r\n    \"createdOn\": null,\r\n    \"lastUpdated\": null,\r\n    \"lastVerified\": null,\r\n    \"partitionKey\": \"LN-8500\",\r\n    \"id\": null,\r\n    \"_rid\": null,\r\n    \"_self\": null,\r\n    \"_etag\": null,\r\n    \"_attachments\": null\r\n  }\r\n]"
+        }
+      },
+      "recorded_at": "Sat, 16 Sep 2023 18:31:40 GMT"
     }
   ],
   "recorded_with": "VCR 6.2.0"
