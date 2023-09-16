@@ -1,10 +1,14 @@
 class TwoOneOneService
 
-  def search(keyword, location)
-    get_url("Search/Keyword?Keyword=#{keyword}&Location=#{location}&Distance=10", keyword)
+  def get_provider_details(service_id)
+    get_url("ServiceAtLocation?idServiceAtLocation=#{service_id}")
   end
 
-  def get_url(url, keyword)
+  def search(keyword, location)
+    get_url("Search/Keyword?Keyword=#{keyword}&Location=#{location}&Distance=10")
+  end
+
+  def get_url(url)
     response = conn.get(url)
     JSON.parse(response.body, symbolize_names: true)
   end
