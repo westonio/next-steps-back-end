@@ -7,6 +7,7 @@ Rails.application.routes.draw do
     namespace :v0 do
       resources :search, only: [:index]
       resources :provider_details, only: [:show]
+      resources :providers, only: [:new, :create, :show]
     end
   end
 end
