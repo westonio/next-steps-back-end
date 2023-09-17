@@ -45,6 +45,8 @@ This API was created to expose endpoints for specialized search queries and used
 ### Will return the first 10 results from the search
 
 1. `GET /api/v0/search?keyword=="checkbox"&location="location_entry"`
+      * Try it out: https://ancient-reaches-38594-79ad833137d5.herokuapp.com/api/v0/search?keyword=healthcare&location=denver
+
 
 ### If you are dealing with providers that register with our service use:  
 
