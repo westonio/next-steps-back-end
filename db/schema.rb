@@ -10,23 +10,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_09_15_211506) do
+ActiveRecord::Schema[7.0].define(version: 2023_09_18_195744) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "providers", force: :cascade do |t|
-    t.string "organization_name"
+    t.string "name"
     t.text "description"
-    t.string "address"
+    t.string "street"
+    t.string "street2"
     t.string "city"
     t.string "state", limit: 2
-    t.string "zip", limit: 5
-    t.string "web_url"
-    t.string "contact_phone"
+    t.string "zipcode", limit: 5
+    t.string "lat"
+    t.string "lon"
+    t.string "website"
+    t.string "phone"
     t.string "fees"
     t.text "schedule"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "username"
+    t.string "password_digest"
   end
 
 end
