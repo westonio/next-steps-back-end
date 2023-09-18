@@ -1,7 +1,7 @@
 class FilteredProvider
   attr_reader :id, 
               :provider_name,
-              :street,
+              :address,
               :city,
               :state,
               :lat,
@@ -12,9 +12,9 @@ class FilteredProvider
   def initialize(data, keyword)
     @id = data[:document][:idServiceAtLocation]
     @provider_name = data[:document][:nameService]
-    @street = data[:document][:address1PhysicalAddress]
-    @city = data[:document][:cityPhysicalAddress]
-    @state = data[:document][:statePhysicalAddress]
+    @address = data[:document][:address1Physicaladdress]
+    @city = data[:document][:cityPhysicaladdress]
+    @state = data[:document][:statePhysicaladdress]
     @lat = data[:document][:latitudeLocation]
     @lon = data[:document][:longitudeLocation]
     @description = data[:document][:descriptionService]

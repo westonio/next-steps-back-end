@@ -3,7 +3,7 @@ class FilteredProviderSerializer
 
   attributes :category,
               :provider_name,
-              :street,
+              :address,
               :city,
               :state,
               :lat,

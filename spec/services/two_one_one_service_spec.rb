@@ -17,14 +17,14 @@ RSpec.describe TwoOneOneService, :vcr do
       expect(provider).to have_key(:nameService)
       expect(provider[:nameService]).to be_a(String)
 
-      expect(provider).to have_key(:address1PhysicalAddress)
-      expect(provider[:address1PhysicalAddress]).to be_a(String)
+      expect(provider).to have_key(:address1Physicaladdress)
+      expect(provider[:address1Physicaladdress]).to be_a(String)
 
-      expect(provider).to have_key(:cityPhysicalAddress)
-      expect(provider[:cityPhysicalAddress]).to be_a(String)
+      expect(provider).to have_key(:cityPhysicaladdress)
+      expect(provider[:cityPhysicaladdress]).to be_a(String)
 
-      expect(provider).to have_key(:statePhysicalAddress)
-      expect(provider[:statePhysicalAddress]).to be_a(String)
+      expect(provider).to have_key(:statePhysicaladdress)
+      expect(provider[:statePhysicaladdress]).to be_a(String)
 
       expect(provider).to have_key(:latitudeLocation)
       expect(provider[:latitudeLocation]).to be_a(String)
