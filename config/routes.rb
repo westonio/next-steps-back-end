@@ -8,8 +8,6 @@ Rails.application.routes.draw do
       resources :search, only: [:index]
       resources :provider_details, only: [:show]
       resources :providers, only: [:new, :create, :show, :update, :destroy]
-      
-      post "/provider_login", to: "provider_login#provider_login"
     end
   end
 end

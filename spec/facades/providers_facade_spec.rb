@@ -82,9 +82,9 @@ RSpec.describe ProvidersFacade, :vcr do
                           :longitude=>"-105.003635",
                           :schedule=>"Monday-Friday, 5am-6:30pm; Saturday: 7-11am",
                           :address=>
-                            [{:idaddress=>"2509270918712944620",
+                            [{:idAddress=>"2509270918712944620",
                               :type=>"physical",
-                              :address_1=>"2000 16th address",
+                              :address_1=>"2000 16th Street",
                               :address_2=>nil,
                               :city=>"Denver",
                               :region=>"Denver",
