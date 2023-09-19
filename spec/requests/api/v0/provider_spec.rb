@@ -5,14 +5,14 @@ RSpec.describe "Provider API", type: :request do
     context "with valid parameters" do
       let(:valid_params) do
         {
-          organization_name: "Test Organization",
+          name: "Test Organization",
           description: "Test Description",
-          address: "123 Test St",
+          street: "123 Test St",
           city: "Test City",
           state: "TX",
-          zip: "12345",
-          web_url: "https://www.test.com",
-          contact_phone: "123-456-7890",
+          zipcode: "12345",
+          website: "https://www.test.com",
+          phone: "123-456-7890",
           fees: "Test Fees",
           schedule: "Test Schedule"
         }
@@ -31,14 +31,14 @@ RSpec.describe "Provider API", type: :request do
     context "with invalid parameters" do
       let(:invalid_params) do
         {
-          organization_name: nil,
+          name: nil,
           description: nil,
-          address: nil,
+          street: nil,
           city: nil,
           state: nil,
-          zip: nil,
-          web_url: nil,
-          contact_phone: nil,
+          zipcode: nil,
+          website: nil,
+          phone: nil,
           fees: nil,
           schedule: nil
         }
@@ -64,14 +64,14 @@ RSpec.describe "Provider API", type: :request do
     context "when the provider exists" do
       let(:provider) do
         Provider.create(
-          organization_name: "Test Organization",
+          name: "Test Organization",
           description: "Test Description",
-          address: "123 Test St",
+          street: "123 Test St",
           city: "Test City",
           state: "TX",
-          zip: "12345",
-          web_url: "https://www.test.com",
-          contact_phone: "123-456-7890",
+          zipcode: "12345",
+          website: "https://www.test.com",
+          phone: "123-456-7890",
           fees: "Test Fees",
           schedule: "Test Schedule"
         )
@@ -86,14 +86,14 @@ RSpec.describe "Provider API", type: :request do
 
         expect(json_response).to include(
           'id' => provider.id,
-          'organization_name' => 'Test Organization',
+          'name' => 'Test Organization',
           'description' => 'Test Description',
-          'address' => '123 Test St',
+          'street' => '123 Test St',
           'city' => 'Test City',
           'state' => 'TX',
-          'zip' => '12345',
-          'web_url' => 'https://www.test.com',
-          'contact_phone' => '123-456-7890',
+          'zipcode' => '12345',
+          'website' => 'https://www.test.com',
+          'phone' => '123-456-7890',
           'fees' => 'Test Fees',
           'schedule' => 'Test Schedule'
         )
@@ -116,14 +116,14 @@ RSpec.describe "Provider API", type: :request do
     context "with valid parameters" do
       let(:provider) do
         Provider.create(
-          organization_name: "Test Organization",
+          name: "Test Organization",
           description: "Test Description",
-          address: "123 Test St",
+          street: "123 Test St",
           city: "Test City",
           state: "TX",
-          zip: "12345",
-          web_url: "https://www.test.com",
-          contact_phone: "123-456-7890",
+          zipcode: "12345",
+          website: "https://www.test.com",
+          phone: "123-456-7890",
           fees: "Test Fees",
           schedule: "Test Schedule"
         )
@@ -131,14 +131,14 @@ RSpec.describe "Provider API", type: :request do
 
       let(:valid_params) do
         {
-          organization_name: "Updated Organization",
+          name: "Updated Organization",
           description: "Updated Description",
-          address: "456 Updated St",
+          street: "456 Updated St",
           city: "Updated City",
           state: "NY",
-          zip: "54321",
-          web_url: "https://www.updated.com",
-          contact_phone: "987-654-3210",
+          zipcode: "54321",
+          website: "https://www.updated.com",
+          phone: "987-654-3210",
           fees: "Updated Fees",
           schedule: "Updated Schedule"
         }
@@ -151,24 +151,24 @@ RSpec.describe "Provider API", type: :request do
 
         provider.reload
 
-        expect(provider.organization_name).to eq(valid_params[:organization_name])
+        expect(provider.name).to eq(valid_params[:name])
         expect(provider.description).to eq(valid_params[:description])
 
-        expect(response.body).to include(valid_params[:organization_name])
+        expect(response.body).to include(valid_params[:name])
       end
     end
 
     context "with invalid parameters" do
       let(:provider) do
         Provider.create(
-          organization_name: "Test Organization",
+          name: "Test Organization",
           description: "Test Description",
-          address: "123 Test St",
+          street: "123 Test St",
           city: "Test City",
           state: "TX",
-          zip: "12345",
-          web_url: "https://www.test.com",
-          contact_phone: "123-456-7890",
+          zipcode: "12345",
+          website: "https://www.test.com",
+          phone: "123-456-7890",
           fees: "Test Fees",
           schedule: "Test Schedule"
         )
@@ -176,14 +176,14 @@ RSpec.describe "Provider API", type: :request do
 
       let(:invalid_params) do
         {
-          organization_name: nil,
+          name: nil,
           description: nil,
-          address: nil,
+          street: nil,
           city: nil,
           state: nil,
-          zip: nil,
-          web_url: nil,
-          contact_phone: nil,
+          zipcode: nil,
+          website: nil,
+          phone: nil,
           fees: nil,
           schedule: nil
         }
@@ -205,14 +205,14 @@ RSpec.describe "Provider API", type: :request do
     context "when the provider exists" do
       let!(:provider) do
         Provider.create(
-          organization_name: "Test Organization",
+          name: "Test Organization",
           description: "Test Description",
-          address: "123 Test St",
+          street: "123 Test St",
           city: "Test City",
           state: "TX",
-          zip: "12345",
-          web_url: "https://www.test.com",
-          contact_phone: "123-456-7890",
+          zipcode: "12345",
+          website: "https://www.test.com",
+          phone: "123-456-7890",
           fees: "Test Fees",
           schedule: "Test Schedule"
         )
