@@ -18,20 +18,15 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_19_001702) do
     t.string "name"
     t.text "description"
     t.string "street"
-    t.string "street2"
     t.string "city"
     t.string "state", limit: 2
     t.string "zipcode", limit: 5
-    t.string "lat"
-    t.string "lon"
     t.string "website"
     t.string "phone"
     t.string "fees"
     t.text "schedule"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "username"
-    t.string "password_digest"
   end
 
   create_table "users", force: :cascade do |t|
