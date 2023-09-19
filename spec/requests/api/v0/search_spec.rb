@@ -25,8 +25,8 @@ RSpec.describe "Search", type: :request do
         expect(provider[:attributes]).to have_key(:description)
         expect(provider[:attributes][:description]).to be_a(String)
 
-        expect(provider[:attributes]).to have_key(:address)
-        expect(provider[:attributes][:address]).to be_a(String)
+        expect(provider[:attributes]).to have_key(:street)
+        expect(provider[:attributes][:street]).to be_a(String)
 
         expect(provider[:attributes]).to have_key(:city)
         expect(provider[:attributes][:city]).to be_a(String)

@@ -17,11 +17,11 @@ RSpec.describe "FilteredProvider", type: :poros do
           "nameLocation": nil,
           "latitudeLocation": "39.715260",
           "longitudeLocation": "-105.003082",
-          "address1Physicaladdress": "1241 W Bayaud Ave",
-          "cityPhysicaladdress": "Denver",
-          "regionPhysicaladdress": "Denver County",
-          "statePhysicaladdress": "CO",
-          "countryPhysicaladdress": "United States",
+          "address1PhysicalAddress": "1241 W Bayaud Ave",
+          "cityPhysicalAddress": "Denver",
+          "regionPhysicalAddress": "Denver County",
+          "statePhysicalAddress": "CO",
+          "countryPhysicalAddress": "United States",
           "taxonomyTerm": [
             "Animal Shelters",
             "Foster Care/Temporary Shelter for Animals"
@@ -54,7 +54,7 @@ RSpec.describe "FilteredProvider", type: :poros do
 
       expect(filtered_data.id).to eq("211colorad-a0h4T000002u0xmQAA")
       expect(filtered_data.provider_name).to eq("TEMPORARY SHELTER FOR PETS")
-      expect(filtered_data.address).to eq("1241 W Bayaud Ave")
+      expect(filtered_data.street).to eq("1241 W Bayaud Ave")
       expect(filtered_data.city).to eq("Denver")
       expect(filtered_data.state).to eq("CO")
       expect(filtered_data.lat).to eq("39.715260")

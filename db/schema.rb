@@ -15,17 +15,14 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_19_001702) do
   enable_extension "plpgsql"
 
   create_table "providers", force: :cascade do |t|
-    t.string "name"
+    t.string "organization_name"
     t.text "description"
-    t.string "street"
-    t.string "street2"
+    t.string "address"
     t.string "city"
     t.string "state", limit: 2
-    t.string "zipcode", limit: 5
-    t.string "lat"
-    t.string "lon"
-    t.string "website"
-    t.string "phone"
+    t.string "zip", limit: 5
+    t.string "web_url"
+    t.string "contact_phone"
     t.string "fees"
     t.text "schedule"
     t.datetime "created_at", null: false
