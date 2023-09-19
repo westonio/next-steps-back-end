@@ -5,18 +5,16 @@ RSpec.describe "Provider API", type: :request do
     context "with valid parameters" do
       let(:valid_params) do
         {
-          name: "Test Organization",
+          organization_name: "Test Organization",
           description: "Test Description",
-          street: "123 Test St",
+          address: "123 Test St",
           city: "Test City",
           state: "TX",
-          zipcode: "12345",
-          website: "https://www.test.com",
-          phone: "123-456-7890",
+          zip: "12345",
+          web_url: "https://www.test.com",
+          contact_phone: "123-456-7890",
           fees: "Test Fees",
-          schedule: "Test Schedule",
-          username: "test",
-          password: "test"
+          schedule: "Test Schedule"
         }
       end
 
@@ -33,18 +31,16 @@ RSpec.describe "Provider API", type: :request do
     context "with invalid parameters" do
       let(:invalid_params) do
         {
-          name: nil,
+          organization_name: nil,
           description: nil,
-          street: nil,
+          address: nil,
           city: nil,
           state: nil,
-          zipcode: nil,
-          website: nil,
-          phone: nil,
+          zip: nil,
+          web_url: nil,
+          contact_phone: nil,
           fees: nil,
-          schedule: nil,
-          username: nil,
-          password: nil
+          schedule: nil
         }
       end
 
@@ -68,18 +64,16 @@ RSpec.describe "Provider API", type: :request do
     context "when the provider exists" do
       let(:provider) do
         Provider.create(
-          name: "Test Organization",
+          organization_name: "Test Organization",
           description: "Test Description",
-          street: "123 Test St",
+          address: "123 Test St",
           city: "Test City",
           state: "TX",
-          zipcode: "12345",
-          website: "https://www.test.com",
-          phone: "123-456-7890",
+          zip: "12345",
+          web_url: "https://www.test.com",
+          contact_phone: "123-456-7890",
           fees: "Test Fees",
-          schedule: "Test Schedule",
-          username: "test",
-          password: "test"
+          schedule: "Test Schedule"
         )
       end
 
@@ -92,16 +86,16 @@ RSpec.describe "Provider API", type: :request do
 
         expect(json_response).to include(
           'id' => provider.id,
-          'name' => 'Test Organization',
+          'organization_name' => 'Test Organization',
           'description' => 'Test Description',
-          'street' => '123 Test St',
+          'address' => '123 Test St',
           'city' => 'Test City',
           'state' => 'TX',
-          'zipcode' => '12345',
-          'website' => 'https://www.test.com',
-          'phone' => '123-456-7890',
+          'zip' => '12345',
+          'web_url' => 'https://www.test.com',
+          'contact_phone' => '123-456-7890',
           'fees' => 'Test Fees',
-          'schedule' => 'Test Schedule',
+          'schedule' => 'Test Schedule'
         )
       end
     end
@@ -122,35 +116,31 @@ RSpec.describe "Provider API", type: :request do
     context "with valid parameters" do
       let(:provider) do
         Provider.create(
-          name: "Test Organization",
+          organization_name: "Test Organization",
           description: "Test Description",
-          street: "123 Test St",
+          address: "123 Test St",
           city: "Test City",
           state: "TX",
-          zipcode: "12345",
-          website: "https://www.test.com",
-          phone: "123-456-7890",
+          zip: "12345",
+          web_url: "https://www.test.com",
+          contact_phone: "123-456-7890",
           fees: "Test Fees",
-          schedule: "Test Schedule",
-          username: "test",
-          password: "test"
+          schedule: "Test Schedule"
         )
       end
 
       let(:valid_params) do
         {
-          name: "Updated Organization",
+          organization_name: "Updated Organization",
           description: "Updated Description",
-          street: "456 Updated St",
+          address: "456 Updated St",
           city: "Updated City",
           state: "NY",
-          zipcode: "54321",
-          website: "https://www.updated.com",
-          phone: "987-654-3210",
+          zip: "54321",
+          web_url: "https://www.updated.com",
+          contact_phone: "987-654-3210",
           fees: "Updated Fees",
-          schedule: "Updated Schedule",
-          username: "updated",
-          password: "updated"
+          schedule: "Updated Schedule"
         }
       end
 
@@ -161,45 +151,41 @@ RSpec.describe "Provider API", type: :request do
 
         provider.reload
 
-        expect(provider.name).to eq(valid_params[:name])
+        expect(provider.organization_name).to eq(valid_params[:organization_name])
         expect(provider.description).to eq(valid_params[:description])
 
-        expect(response.body).to include(valid_params[:name])
+        expect(response.body).to include(valid_params[:organization_name])
       end
     end
 
     context "with invalid parameters" do
       let(:provider) do
         Provider.create(
-          name: "Test Organization",
+          organization_name: "Test Organization",
           description: "Test Description",
-          street: "123 Test St",
+          address: "123 Test St",
           city: "Test City",
           state: "TX",
-          zipcode: "12345",
-          website: "https://www.test.com",
-          phone: "123-456-7890",
+          zip: "12345",
+          web_url: "https://www.test.com",
+          contact_phone: "123-456-7890",
           fees: "Test Fees",
-          schedule: "Test Schedule",
-          username: "test2",
-          password: "test"
+          schedule: "Test Schedule"
         )
       end
 
       let(:invalid_params) do
         {
-          name: nil,
+          organization_name: nil,
           description: nil,
-          street: nil,
+          address: nil,
           city: nil,
           state: nil,
-          zipcode: nil,
-          website: nil,
-          phone: nil,
+          zip: nil,
+          web_url: nil,
+          contact_phone: nil,
           fees: nil,
-          schedule: nil,
-          username: nil,
-          password: nil
+          schedule: nil
         }
       end
 
@@ -219,18 +205,16 @@ RSpec.describe "Provider API", type: :request do
     context "when the provider exists" do
       let!(:provider) do
         Provider.create(
-          name: "Test Organization",
+          organization_name: "Test Organization",
           description: "Test Description",
-          street: "123 Test St",
+          address: "123 Test St",
           city: "Test City",
           state: "TX",
-          zipcode: "12345",
-          website: "https://www.test.com",
-          phone: "123-456-7890",
+          zip: "12345",
+          web_url: "https://www.test.com",
+          contact_phone: "123-456-7890",
           fees: "Test Fees",
-          schedule: "Test Schedule",
-          username: "test",
-          password: "test"
+          schedule: "Test Schedule"
         )
       end
 
