@@ -22,7 +22,7 @@ Link to [Next Steps Website](https://next-steps-front-end-4778e35e4143.herokuapp
 
 ## Project Description
 
-**Next Steps** is full-stack project that leverages the [211 API](https://apiportal.211.org) along with geolocation to assist individuals in finding community resources in their vicinity.  We thought it was particularly important to create search options catered to persons who may not have the ability to navigate existing resources. This repository contains the back-end portion of the project, providing an API for the [front-end application](https://github.com/westonio/next-steps-front-end).
+**Next Steps** is a full-stack project that leverages the [211 API](https://apiportal.211.org) along with geolocation to assist individuals in finding community resources in their vicinity.  We thought it was particularly important to create search options catered to persons who may not have the ability to navigate existing resources. This repository contains the back-end portion of the project, providing an API for the [front-end application](https://github.com/westonio/next-steps-front-end).
 
 This project has been deployed using [Heroku](https://id.heroku.com/login), and [Circle CI](https://circleci.com/) was used for Continuous Integration.
 
@@ -41,12 +41,71 @@ This project has been deployed using [Heroku](https://id.heroku.com/login), and 
 
 This API was created to expose endpoints for specialized search queries and used with the sister front-end application.  The endpoint takes in two parameters, "keyword" and "location".  We provide the user with some keywords built in, such as "basic needs", "shelters", "medical care", "mental health care", and others.  They can select keywords from our provided options, or utilize the search bar to search their own keyword(s).
 
+## Database Schema
+```
+create_table "providers", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.string "street"
+    t.string "city"
+    t.string "state", limit: 2
+    t.string "zipcode", limit: 5
+    t.string "website"
+    t.string "phone"
+    t.string "fees"
+    t.text "schedule"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+  create_table "users", force: :cascade do |t|
+    t.string "username"
+    t.string "password_digest"
+    t.string "authentication_token"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+```
+
 ## Endpoints
 ### Will return the first 10 results from the search
 
 1. `GET /api/v0/search?keyword=="checkbox"&location="location_entry"`
       * Try it out: https://ancient-reaches-38594-79ad833137d5.herokuapp.com/api/v0/search?keyword=healthcare&location=denver
-
+_Example Response:_
+```
+{
+  "data": [
+            {
+               "id": "211contrac-1561",
+               "type": "filtered_provider",
+               "attributes": {
+                    "category": "healthcare",
+                    "provider_name": "DAVITA HEALTHCARE PARTNERS (DIALYSIS CENTERS)",
+                    "street": "2000 16th Street",
+                    "city": "Denver",
+                    "state": "CO",
+                    "lat": "39.753627",
+                    "lon": "-105.003635",
+                    "description": "Provides dialysis services for those diagnosed with chronic kidney failure, a condition also known as chronic kidney disease (CKD). Provides locations of over 2,000 outpatient dialysis facilities and acute units in over 800 hospitals 46 states and the District of Columbia. Website offers extensive information about CKD."
+               }
+          },
+          {
+               "id": "211contrac-1562",
+               "type": "filtered_provider",
+               "attributes": {
+                    "category": "healthcare",
+                    "provider_name": "DAVITA HEALTHCARE PARTNERS (DISEASE/DISABILITY INFORMATION)",
+                    "street": "2000 16th Street",
+                    "city": "Denver",
+                    "state": "CO",
+                    "lat": "39.753627",
+                    "lon": "-105.003635",
+                    "description": "Provides dialysis services for those diagnosed with chronic kidney failure, a condition also known as chronic kidney disease (CKD). Provides locations of over 2,000 outpatient dialysis facilities and acute units in over 800 hospitals 46 states and the District of Columbia. Website offers extensive information about CKD."
+               }
+         }
+    ]
+}
+```
 
 ### If you are dealing with providers that register with our service use:  
 
@@ -60,8 +119,8 @@ This API was created to expose endpoints for specialized search queries and used
 1. `GET /api/v0/provider_details/:211_id`
 
 ### The Endpoints we are utilizing from the 211 Search API are:  
-  *note: The 211 allows trial usage, it will only give you the first 10 results;*
-  *You must get an API key to access any part of the 211 API, We hid ours by utilizing built in Rails Credentials.*
+  *Note: The 211 allows trial usage, it will only give you the first 10 results;*
+  *You must get an API key to access any part of the 211 API, We hid ours by utilizing built-in Rails Credentials.*
 
 1. `GET https://api.211.org/search/v1/api/Search/Keyword?Keyword=#{keyword}&Location=#{location}&Distance=10`
     
@@ -71,7 +130,7 @@ This API was created to expose endpoints for specialized search queries and used
     
 ## Future Iterations
 
-- Scale: Utilize cloud storage to store data for Providers and resource list saved by user.  
+- Scale: Utilize cloud storage to store data for Providers and resource list saved by the user.  
 - Utilize [Open AI API](https://openai.com/blog/openai-api) for generating motivational statements based on user's identified needs.
 - Create additional pre-built search options that make finding resources easy and convenient.
 - Admin functionality.
