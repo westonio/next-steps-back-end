@@ -115,6 +115,64 @@
         }
       },
       "recorded_at": "Sat, 16 Sep 2023 18:31:40 GMT"
+    },
+    {
+      "request": {
+        "method": "get",
+        "uri": "https://api.211.org/search/v1/api/ServiceAtLocation?idServiceAtLocation=211dayton-49038",
+        "body": {
+          "encoding": "US-ASCII",
+          "string": ""
+        },
+        "headers": {
+          "Api-Key": [
+            "MY_SECRET_TOKEN"
+          ],
+          "User-Agent": [
+            "Faraday v2.7.11"
+          ],
+          "Accept-Encoding": [
+            "gzip;q=1.0,deflate;q=0.6,identity;q=0.3"
+          ],
+          "Accept": [
+            "*/*"
+          ]
+        }
+      },
+      "response": {
+        "status": {
+          "code": 200,
+          "message": "OK"
+        },
+        "headers": {
+          "Transfer-Encoding": [
+            "chunked"
+          ],
+          "Content-Type": [
+            "application/json; charset=utf-8"
+          ],
+          "Vary": [
+            "Accept-Encoding"
+          ],
+          "Powered-By": [
+            "211 National Data Platform"
+          ],
+          "View-Data": [
+            "{\"idOrganization\":\"211dayton-DAY18817\",\"idService\":\"211dayton-16308\",\"idLocation\":\"211dayton-18819\",\"idServiceAtLocation\":\"211dayton-49038\",\"nameOrganization\":\"NATIONAL COALITION AGAINST DOMESTIC VIOLENCE\",\"nameService\":\"NATIONAL DOMESTIC VIOLENCE HOTLINE\",\"location\":{\"city\":\"Denver\",\"county\":\"Denver\",\"stateProvince\":\"CO\",\"postalCode\":\"80203\",\"country\":\"United States\",\"latitude\":\"39.725478\",\"longitude\":\"-104.983619\"},\"serviceTaxonomyCodes\":[\"RP-1500.1400-200\",\"RP-1500.1400\"]}"
+          ],
+          "Request-Context": [
+            "appId=cid-v1:f765b36d-b251-47fd-848a-736b908cb0fe"
+          ],
+          "Date": [
+            "Thu, 21 Sep 2023 01:27:17 GMT"
+          ]
+        },
+        "body": {
+          "encoding": "ASCII-8BIT",
+          "string": "[\r\n  {\r\n    \"idOrganization\": \"211dayton-DAY18817\",\r\n    \"name\": \"NATIONAL COALITION AGAINST DOMESTIC VIOLENCE\",\r\n    \"alternateName\": null,\r\n    \"description\": \"NCADV Vision\\nThe vision of NCADV is to create a culture where domestic violence is not tolerated; and where society empowers victims and survivors, and holds abusers accountable.\\n\\nNCADV Mission\\nNCADV is the voice of victims and survivors.  We are the catalyst for changing society to have zero tolerance for domestic violence.  We do this by effecting public policy, increasing understanding of the impact of domestic violence, and providing programs and education that drive that change.\\n\",\r\n    \"url\": \"http://www.ncadv.org\",\r\n    \"taxStatus\": null,\r\n    \"taxId\": null,\r\n    \"yearIncorporated\": null,\r\n    \"legalStatus\": null,\r\n    \"services\": [\r\n      {\r\n        \"idService\": \"211dayton-16308\",\r\n        \"idOrganization\": \"211dayton-DAY18817\",\r\n        \"name\": \"NATIONAL DOMESTIC VIOLENCE HOTLINE\",\r\n        \"alternateName\": null,\r\n        \"description\": \"Open to callers from 50 states, Mon. - Friday 8:00am - 5:00pm.  Coordinator will refer caller to either victim or batterer, access to services, or program designed to address callers needs in their area. Coordinator is also trained to provide safety advice.\",\r\n        \"email\": null,\r\n        \"url\": null,\r\n        \"status\": \"Active\",\r\n        \"applicationProcess\": \"Call for more information\",\r\n        \"waitTime\": null,\r\n        \"fees\": \"None\",\r\n        \"accreditations\": null,\r\n        \"schedule\": \"Mon. - Fri. 8:00am - 5:00pm\",\r\n        \"language\": null,\r\n        \"serviceArea\": [\r\n          {\r\n            \"idServiceArea\": \"6172207214276261894\",\r\n            \"city\": null,\r\n            \"county\": null,\r\n            \"stateProvince\": null,\r\n            \"country\": \"United States\"\r\n          }\r\n        ],\r\n        \"eligibility\": \"Call for more information\",\r\n        \"document\": null,\r\n        \"contact\": [],\r\n        \"phone\": [\r\n          {\r\n            \"idPhone\": \"3726104136779842116\",\r\n            \"number\": \"(303) 839-1852\",\r\n            \"extension\": null,\r\n            \"type\": \"Other\",\r\n            \"description\": null,\r\n            \"name\": null\r\n          }\r\n        ],\r\n        \"taxonomy\": [\r\n          {\r\n            \"idTaxonomy\": \"5810669419139230791\",\r\n            \"code\": \"RP-1500.1400-200\",\r\n            \"term\": \"Domestic Violence Hotlines\",\r\n            \"nameLevel1\": \"Mental Health and Substance Use Disorder Services\",\r\n            \"nameLevel2\": \"Mental Health Assessment and Treatment\",\r\n            \"nameLevel3\": \"Crisis Intervention\",\r\n            \"nameLevel4\": \"Crisis Intervention Hotlines/Helplines\",\r\n            \"nameLevel5\": \"Domestic Violence Hotlines\",\r\n            \"nameLevel6\": null\r\n          },\r\n          {\r\n            \"idTaxonomy\": \"6722150396176463586\",\r\n            \"code\": \"RP-1500.1400\",\r\n            \"term\": \"Crisis Intervention Hotlines/Helplines\",\r\n            \"nameLevel1\": \"Mental Health and Substance Use Disorder Services\",\r\n            \"nameLevel2\": \"Mental Health Assessment and Treatment\",\r\n            \"nameLevel3\": \"Crisis Intervention\",\r\n            \"nameLevel4\": \"Crisis Intervention Hotlines/Helplines\",\r\n            \"nameLevel5\": null,\r\n            \"nameLevel6\": null\r\n          }\r\n        ],\r\n        \"category\": null,\r\n        \"serviceAtLocation\": [\r\n          {\r\n            \"idServiceAtLocation\": \"211dayton-49038\",\r\n            \"idLocation\": \"211dayton-18819\",\r\n            \"idService\": \"211dayton-16308\"\r\n          }\r\n        ],\r\n        \"temporaryMessage\": null,\r\n        \"createdOn\": \"2002-04-19T00:00:00\",\r\n        \"lastUpdated\": \"2016-12-15T00:00:00\",\r\n        \"lastVerified\": \"2020-12-23T00:00:00\"\r\n      }\r\n    ],\r\n    \"locations\": [\r\n      {\r\n        \"idLocation\": \"211dayton-18819\",\r\n        \"name\": \"DENVER, COLORADO\",\r\n        \"alternateName\": null,\r\n        \"description\": null,\r\n        \"transportation\": null,\r\n        \"latitude\": \"39.725478\",\r\n        \"longitude\": \"-104.983619\",\r\n        \"schedule\": null,\r\n        \"address\": [\r\n          {\r\n            \"idAddress\": \"1435354731661674884\",\r\n            \"type\": \"physical\",\r\n            \"address_1\": \"600 Grant Street\",\r\n            \"address_2\": \"Suite 750\",\r\n            \"city\": \"Denver\",\r\n            \"region\": \"Denver\",\r\n            \"state_province\": \"CO\",\r\n            \"zipcode\": \"80203\",\r\n            \"country\": \"United States\"\r\n          }\r\n        ],\r\n        \"accessibility\": null,\r\n        \"language\": null,\r\n        \"phone\": [],\r\n        \"serviceAtLocation\": [\r\n          {\r\n            \"idServiceAtLocation\": \"211dayton-49038\",\r\n            \"idLocation\": \"211dayton-18819\",\r\n            \"idService\": \"211dayton-16308\"\r\n          }\r\n        ]\r\n      }\r\n    ],\r\n    \"source\": \"HelpLink 211 Dayton\",\r\n    \"createdOn\": \"2002-04-19T00:00:00\",\r\n    \"lastUpdated\": \"2016-12-15T00:00:00\",\r\n    \"lastVerified\": \"2020-12-23T00:00:00\",\r\n    \"partitionKey\": \"RP-1500.1400-200\",\r\n    \"id\": null,\r\n    \"_rid\": null,\r\n    \"_self\": null,\r\n    \"_etag\": null,\r\n    \"_attachments\": null\r\n  }\r\n]"
+        }
+      },
+      "recorded_at": "Thu, 21 Sep 2023 01:27:18 GMT"
     }
   ],
   "recorded_with": "VCR 6.2.0"

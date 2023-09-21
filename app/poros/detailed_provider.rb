@@ -43,9 +43,7 @@ class DetailedProvider
   end
 
   def find_phone(phone_numbers)
-    phone = phone_numbers.select do |phone|
-      phone if phone[:type].downcase.include?('main') 
-    end.first
+    phone = phone_numbers.first
     phone[:number]
   end
 end
