@@ -227,7 +227,7 @@ RSpec.describe DetailedProvider, type: :poros do
                         }
       provider = DetailedProvider.new(symbolized_data)
               
-      expect(provider.phone).to eq("(800) 244-0680")
+      expect(provider.phone).to eq("(800) 424-6589")
     end
 
     it 'returns message if number is not available' do
