@@ -16,29 +16,27 @@ class DetailedProvider
 
   
   def initialize(data)
-    @id = data[:idOrganization]
-    @name = data[:name]
-    @description = data[:description]
-    @street = data[:locations].first[:address].first[:address_1]
-    @street2 = data[:locations].first[:address].first[:address_2]
-    @city = data[:locations].first[:address].first[:city]
-    @state = data[:locations].first[:address].first[:state_province]
-    @zipcode = data[:locations].first[:address].first[:zipcode]
-    @lat = data[:locations].first[:latitude]
-    @lon = data[:locations].first[:longitude]
-    @website = data[:url]
-    @phone = get_phone(data)
-    @fees = data[:services].first[:fees]
-    @schedule = data[:locations].first[:schedule]
+    @id = data[:idOrganization] || "Not Available"
+    @name = data[:name] || "Not Available"
+    @description = data[:description] || "Not Available"
+    @street = data[:locations].first[:address].first[:address_1] || "Not Available"
+    @street2 = data[:locations].first[:address].first[:address_2] || "Not Available"
+    @city = data[:locations].first[:address].first[:city] || "Not Available"
+    @state = data[:locations].first[:address].first[:state_province] || "Not Available"
+    @zipcode = data[:locations].first[:address].first[:zipcode] || "Not Available"
+    @lat = data[:locations].first[:latitude] || "Not Available"
+    @lon = data[:locations].first[:longitude] || "Not Available"
+    @website = data[:url] || "Not Available"
+    @phone = get_phone(data) || "Not Available"
+    @fees = data[:services].first[:fees] || "Not Available"
+    @schedule = data[:locations].first[:schedule] || "Not Available"
   end
 
   def get_phone(data)
-    if data[:services].first.has_key?(:phone)
+    if data[:services].first[:phone].present?
       find_phone(data[:services].first[:phone])
-    elsif data[:locations].first.has_key?(:phone)
+    elsif data[:locations].first[:phone].present?
       find_phone(data[:locations].first[:phone])
-    else
-      "Phone number not available"
     end
   end
 

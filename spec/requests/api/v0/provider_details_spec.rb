@@ -4,15 +4,14 @@ RSpec.describe 'Search', type: :request do
   describe 'GET /api/v0/provider_details/:id', :vcr do
     context 'When a valid ID is used' do
       it 'should return the details of a provider' do
-        provider_id = "211colorad-a0h4T000003fVncQAE"
+        provider_id = "211tulsa-67499"
         
         get "/api/v0/provider_details/#{provider_id}"
-
+        
         expect(response).to be_successful
-
+        
         response_data = JSON.parse(response.body, symbolize_names: true)
         provider = response_data[:data]
-        
         expect(provider).to have_key(:id)
         expect(provider[:id]).to be_an(String)
         

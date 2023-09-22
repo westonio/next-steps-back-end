@@ -77,7 +77,7 @@ RSpec.describe DetailedProvider, type: :poros do
         expect(provider.name).to eq("DAVITA HEALTHCARE PARTNERS")
         expect(provider.description).to eq("Provides dialysis services for those diagnosed with chronic kidney failure, a condition also known as chronic kidney disease (CKD). Provides locations of over 2,000 outpatient dialysis facilities and acute units in over 800 hospitals 46 states and the District of Columbia. Website offers extensive information about CKD.")
         expect(provider.street).to eq("2000 16th Street")
-        expect(provider.street2).to eq(nil)
+        expect(provider.street2).to eq("Not Available")
         expect(provider.city).to eq("Denver")
         expect(provider.state).to eq("CO")
         expect(provider.zipcode).to eq("80202")
@@ -297,7 +297,7 @@ RSpec.describe DetailedProvider, type: :poros do
 
       provider = DetailedProvider.new(symbolized_data)
 
-      expect(provider.phone).to eq("Phone number not available")
+      expect(provider.phone).to eq("Not Available")
     end
   end
 end
